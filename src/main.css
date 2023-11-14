@@ -1,0 +1,35 @@
+body {
+    background-color: #282f64;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+canvas {
+    background-color: #742134;
+    border: none; /* Remove this if you prefer a border around the canvas */
+}
+
+/* Style other elements like buttons, forms, etc., to match your theme */
+label {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    /* Add additional styling as needed */
+}
+
+button,
+input {
+    background-color: #742134; /* Wine background */
+    color: #fab900; /* Yellow text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    /* Add more styles as needed */
+}
+
+button:hover {
+    background-color: #5e1a24; /* Slightly darker wine color for hover effect */
+}

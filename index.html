@@ -1,13 +1,78 @@
-<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple Drawing App</title>
+        <style>
+            canvas {
+                border: 1px solid black;
+                touch-action: none;
+            }
+            #header {
+                text-align: center;
+                font-size: 24px;
+                margin-top: 10px;
+            }
+            #instructions {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .button-container {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        </style>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./src/main.css" />
+    </head>
+    <body>
+        <div id="header">Drawing App</div>
+        <div id="instructions">
+            Draw with your finger, mouse, or stylus. Use the buttons below to clear the canvas or
+            continue.
+        </div>
+        <div class="button-container">
+            <button id="cleanButton">Clean Canvas</button>
+            <button id="continueButton">Continue</button>
+        </div>
+        <button id="undoButton">Undo</button>
+        <canvas id="drawingCanvas"></canvas>
+        <div id="formScreen" style="display: none">
+            <form id="userForm">
+                <label for="name">Name:</label><br />
+                <input type="text" id="name" name="name" /><br />
+
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" name="email" /><br />
+
+                <label for="city">City:</label><br />
+                <input type="text" id="city" name="city" /><br />
+
+                <label for="state">State:</label><br />
+                <input type="text" id="state" name="state" /><br />
+
+                <button type="button" id="saveButton">Save</button>
+                <button type="button" id="cancelButton">Cancel</button>
+            </form>
+        </div>
+
+        <div id="confirmationScreen" style="display: none">
+            <div id="confirmationMessage">Saved!</div>
+            <img
+                id="savedDrawing"
+                src=""
+                alt="Saved Drawing"
+                style="border: 1px solid black; max-width: 100%"
+            />
+            <div id="savedData">
+                <!-- Populated with form data -->
+            </div>
+            <button id="startOverButton">Start Over</button>
+        </div>
+
+        <script src="./src/main.ts" type="module"></script>
+    </body>
 </html>
