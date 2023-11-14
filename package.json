@@ -1,15 +1,25 @@
 {
-  "name": "silencionago-guestbook-gpt",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
-  }
+    "name": "silencionago-guestbook-gpt",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.2",
+        "vite": "^4.4.5"
+    },
+    "dependencies": {
+        "@vitejs/plugin-basic-ssl": "^1.0.1",
+        "vite-plugin-pwa": "^0.16.7"
+    },
+    "prettier": {
+        "trailingComma": "all",
+        "semi": false,
+        "printWidth": 100,
+        "tabWidth": 4
+    }
 }
