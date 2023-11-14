@@ -1,10 +1,11 @@
+
 import {
     getFirestore,
     collection,
     addDoc,
     enableIndexedDbPersistence,
-} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"
+} from "firebase/firestore"
+import { initializeApp } from "firebase/app"
 
 const firebaseConfig = {
     apiKey: "AIzaSyBlCw-x2tnlx_3u1_5O0Szd_oWo7Ux4-oY",
