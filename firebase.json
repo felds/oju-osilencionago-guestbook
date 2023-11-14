@@ -1,0 +1,10 @@
+{
+    "hosting": {
+        "source": ".",
+        "site": "silencionago-guestbook",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "frameworksBackend": {
+            "region": "us-central1"
+        }
+    }
+}

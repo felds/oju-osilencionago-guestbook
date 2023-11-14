@@ -7,12 +7,13 @@ import {
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD1XYy6vzTb6dp831Ho0HMJ6ockM6fh_U0",
-    authDomain: "pleasedeleteme-b99ae.firebaseapp.com",
-    projectId: "pleasedeleteme-b99ae",
-    storageBucket: "pleasedeleteme-b99ae.appspot.com",
-    messagingSenderId: "398878107381",
-    appId: "1:398878107381:web:fbcc062da5e36a748587bc",
+    apiKey: "AIzaSyBlCw-x2tnlx_3u1_5O0Szd_oWo7Ux4-oY",
+    authDomain: "silencionago-9ec09.firebaseapp.com",
+    projectId: "silencionago-9ec09",
+    storageBucket: "silencionago-9ec09.appspot.com",
+    messagingSenderId: "630924541018",
+    appId: "1:630924541018:web:5d8ab1e43f31940bff2c63",
+    measurementId: "G-X158R6ZQ2R",
 }
 
 // Initialize Firebase
