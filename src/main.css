@@ -4,20 +4,53 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+h1 {
+    /* font-size: larger; */
+    text-align: center;
+}
+
+div {
+    margin: auto;
+    max-width: calc(800px + 4rem);
+    padding: 0 2rem;
+}
+
+button {
+    background-color: #742134; /* Wine background */
+    color: #fab900; /* Yellow text */
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 4px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Add more styles as needed */
+}
+
+button:hover {
+    background-color: #5e1a24; /* Slightly darker wine color for hover effect */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 canvas {
     background-color: #742134;
     border: none; /* Remove this if you prefer a border around the canvas */
+    display: block;
+    margin-inline: auto;
 }
 
-/* Style other elements like buttons, forms, etc., to match your theme */
-label {
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    /* Add additional styling as needed */
+p {
+    margin: 0;
+    margin-bottom: 0.5em;
 }
 
-button,
 input {
+    width: 80%;
     background-color: #742134; /* Wine background */
     color: #fab900; /* Yellow text */
     border: none;
@@ -26,10 +59,11 @@ input {
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
-    /* Add more styles as needed */
 }
 
-button:hover {
-    background-color: #5e1a24; /* Slightly darker wine color for hover effect */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #742134;
 }

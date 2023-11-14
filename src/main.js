@@ -1,10 +1,4 @@
-
-import {
-    getFirestore,
-    collection,
-    addDoc,
-    enableIndexedDbPersistence,
-} from "firebase/firestore"
+import { getFirestore, collection, addDoc, enableIndexedDbPersistence } from "firebase/firestore"
 import { initializeApp } from "firebase/app"
 
 const firebaseConfig = {
@@ -44,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedDrawing = document.getElementById("savedDrawing")
     const savedData = document.getElementById("savedData")
     const startOverButton = document.getElementById("startOverButton")
+    const userForm = document.getElementById("userForm")
+
     let isDrawing = false
     let drawingHistory = []
 
@@ -111,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
             })
     }
 
-    saveButton.addEventListener("click", function () {
+    userForm.addEventListener("submit", function (event) {
         event.preventDefault()
         const drawingDataUrl = document.getElementById("drawingCanvas").toDataURL()
         const formData = {
@@ -130,9 +126,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Display the saved image and data
         savedDrawing.src = drawingDataUrl
         savedData.innerHTML = `<p>Name: ${formData.name}</p>
-                                         <p>Email: ${formData.email}</p>
-                                         <p>City: ${formData.city}</p>
-                                         <p>State: ${formData.state}</p>`
+                                       <p>Email: ${formData.email}</p>
+                                       <p>City: ${formData.city}</p>
+                                       <p>State: ${formData.state}</p>`
 
         // Transition to the confirmation screen
         toggleScreen(confirmationScreen, "block", [formScreen], "none")
@@ -248,5 +244,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    const userForm = document.getElementById("userForm")
+    cancelButton.addEventListener("click", function () {
+        // Logic to hide the form screen and show the initial drawing screen
+        toggleScreen(canvas, "block", [formScreen, confirmationScreen], "none")
+        undoButton.style.display = "block"
+        cleanButton.style.display = "block"
+        continueButton.style.display = "block"
+    })
 })
