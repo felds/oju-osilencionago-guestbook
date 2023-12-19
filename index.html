@@ -12,55 +12,44 @@
     <body>
         <div id="top">
           <div id="header"><h1>O que cala em você</h1></div>
-          <!-- <div id="instructions">
-            <p>
-              Responda a pergunta “O que cala em você?” escrevendo na tela com a
-              caneta ou com seu próprio dedo.
-            </p><p>
-              Se precisar corrigir, clique em limpar
-              ou desfazer e escreva novamente. 
-            <p>Clique no botão continuar. 
-            </p>
-            <p>Na tela
-              seguinte, preencha os campos indicados, em seguida clique no botão
-              enviar
-            </p>
-          </div> -->
+       
     
-          <div id="canvasContainer">
-            <canvas id="drawingCanvas" width="800" height="600"></canvas>
-          </div>
-          
-          <div class="button-container">
-            <button id="undoButton">Desfazer</button>
-            <button id="cleanButton">Limpar</button>
-            <button id="continueButton">Continuar</button>
+          <div id="mainContainer" >
+            <div id="canvasContainer">
+              <canvas id="drawingCanvas" width="800" height="600"></canvas>
+            </div>
+            
+            <div class="button-container">
+              <button id="undoButton">Desfazer</button>
+              <button id="cleanButton">Limpar</button>
+              <button id="continueButton">Continuar</button>
+            </div>
           </div>
     
         </div>
         
         
         
-        <div id="formScreen" style="display: none">
+        <div id="formScreen" class="wrapper" style="display: none">
           <form id="userForm">
-            <label for="name">Nome:</label><br />
-            <input type="text" id="name" name="name" required/><br />
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required/>
     
-            <label for="email">Email:</label><br />
-            <input type="email" id="email" name="email" required/><br />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required/>
     
-            <label for="city">Cidade:</label><br />
-            <input type="text" id="city" name="city" required/><br />
+            <label for="city">Cidade:</label>
+            <input type="text" id="city" name="city" required/>
     
-            <label for="state">Estado:</label><br />
-            <input type="text" id="state" name="state" required/><br />
+            <label for="state">Estado:</label>
+            <input type="text" id="state" name="state" required/>
     
             <button type="button" id="cancelButton">Cancelar</button>
             <button type="submit" id="saveButton">Continuar</button>
           </form>
         </div>
     
-        <div id="confirmationScreen" style="display: none">
+        <div id="confirmationScreen" class="wrapper" style="display: none">
           <div id="confirmationMessage"><h1>Sua imagem foi Salva</h1></div>
           
           <div class="button-container"><button id="startOverButton">Começar de Novo</button></div>
