@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // canvas.width = window.innerWidth;
     // canvas.height = window.innerHeight;
-    canvas.width = 960
-    canvas.height = 720
+    canvas.width = 800
+    canvas.height = 600
 
     cleanButton.addEventListener("click", function () {
         drawingHistory = []

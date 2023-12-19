@@ -11,7 +11,7 @@ h1 {
 
 div {
     margin: auto;
-    max-width: calc(960px + 4rem);
+    max-width: calc(800px + 4rem);
     padding: 0 2rem;
 }
 
